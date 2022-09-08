@@ -6,17 +6,17 @@ describe('merge sort', () => {
     // })
 
 
-    it('divides array into two arrays', () => {
-        let result = mergeSort([1, 2, 3]);
+    // it('divides array into two arrays', () => {
+    //     let result = mergeSort([1, 2, 3]);
 
-        expect(result).toStrictEqual([[1], [2, 3]]);
-    });
+    //     expect(result).toStrictEqual([[1], [2, 3]]);
+    // });
 
-    it('divides array in half when length > 3', () => {
-        let result = mergeSort([9, 4, 1, 7]);
+    // it('divides array in half when length > 3', () => {
+    //     let result = mergeSort([9, 4, 1, 7]);
 
-        expect(result).toStrictEqual([[9, 4], [1, 7]]);
-    });
+    //     expect(result).toStrictEqual([[9, 4], [1, 7]]);
+    // });
 
     it('returns array if lenght is one', () => {
 
@@ -25,10 +25,10 @@ describe('merge sort', () => {
         expect(result).toStrictEqual([7]);
     });
 
-    it('divides array into single element arrays', () => {
+    it('orders array elements', () => {
 
-        let result = mergeSort([8, 5, 2, 9, 4, 1]);
+        let result = mergeSort([8, 5]);
 
-        expect(result).toStrictEqual([[8], [5], [2], [9], [4], [1]]);
+        expect(result).toStrictEqual([5, 8]);
     });
 })
