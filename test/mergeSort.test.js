@@ -5,9 +5,9 @@ describe('merge sort', () => {
     //     expect(true).toEqual(true)
     // })
 
-    it('describes mergeSort function tests', () => {
+
+    it('divides unsorted array into two arrays', () => {
         let result = mergeSort([1, 2, 3]);
-    
-        expect(result).toEqual([1, 2, 3]);
-    });
+        expect(result).toStrictEqual([[1], [2, 3]]);
+    })
 })
