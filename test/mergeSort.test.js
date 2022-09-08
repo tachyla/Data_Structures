@@ -1,4 +1,4 @@
-const mergeSort = require('../src/merge_tdd')
+const mergeSort = require('../source/merge_tdd')
 
 describe('merge sort', () => {
     // it('returns true', () => {
