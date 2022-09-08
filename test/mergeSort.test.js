@@ -14,8 +14,15 @@ describe('merge sort', () => {
 
     it('divides array in half when length > 3', () => {
         let result = mergeSort([9, 4, 1, 7]);
-        console.log(result);
+
         expect(result).toStrictEqual([[9, 4], [1, 7]]);
+    });
+
+    it('returns array if lenght is one', () => {
+        
+        let result = mergeSort([7]);
+
+        expect(result).toStrictEqual([7]);
 
     });
 })
