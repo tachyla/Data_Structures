@@ -19,10 +19,16 @@ describe('merge sort', () => {
     });
 
     it('returns array if lenght is one', () => {
-        
+
         let result = mergeSort([7]);
 
         expect(result).toStrictEqual([7]);
+    });
 
+    it('divides array into single element arrays', () => {
+
+        let result = mergeSort([8, 5, 2, 9, 4, 1]);
+
+        expect(result).toStrictEqual([[8], [5], [2], [9], [4], [1]]);
     });
 })
