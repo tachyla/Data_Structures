@@ -31,4 +31,11 @@ describe('merge sort', () => {
 
         expect(result).toStrictEqual([5, 8]);
     });
+
+    it('returns sorted array', () => {
+
+        let result = mergeSort([5, 8]);
+
+        expect(result).toStrictEqual([5, 8]);
+    });
 })

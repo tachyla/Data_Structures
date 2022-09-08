@@ -4,14 +4,17 @@ const mergeSort = (array) => {
     let resultArray = [];
     let index1 = 0;
     let index2 = 1;
-
-    if(array.length === 2){
-        if(array[index1] > array[index2]){
-            resultArray.push(array[index2]);
-        }
-    }
-    resultArray.push(array[index1]);
     
+    if(array[index1] > array[index2]){
+        resultArray.push(array[index2]);
+        resultArray.push(array[index1])
+    }
+
+    if(array[index1] < array[index2]){
+        resultArray.push(array[index1]);
+        resultArray.push(array[index2]);
+    }
+
     return resultArray;
 }; 
 
