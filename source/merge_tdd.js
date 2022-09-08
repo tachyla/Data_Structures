@@ -10,7 +10,7 @@ const mergeSort = (array) => {
     }
 
     else{
-        return -1;
+        return array;
     }
 }; 
 

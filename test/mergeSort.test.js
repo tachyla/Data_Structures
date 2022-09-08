@@ -6,8 +6,16 @@ describe('merge sort', () => {
     // })
 
 
-    it('divides unsorted array into two arrays', () => {
+    it('divides array into two arrays', () => {
         let result = mergeSort([1, 2, 3]);
+
         expect(result).toStrictEqual([[1], [2, 3]]);
-    })
+    });
+
+    it('divides array in half when length > 3', () => {
+        let result = mergeSort([9, 4, 1, 7]);
+        console.log(result);
+        expect(result).toStrictEqual([[9, 4], [1, 7]]);
+
+    });
 })
