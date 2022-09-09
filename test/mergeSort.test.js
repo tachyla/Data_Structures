@@ -50,4 +50,10 @@ describe('merge sort', () => {
 
         expect(result).toStrictEqual([3, 7, 7]);
     });
+
+    it('returns sorted array containing more than 3 values', () =>{
+        let result = mergeSort([5, 7, 3, 4]);
+
+        expect(result).toStrictEqual([3, 4, 5, 7]);
+    });
 })
