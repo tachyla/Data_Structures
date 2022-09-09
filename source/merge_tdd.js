@@ -7,10 +7,8 @@ const mergeSort = (array) => {
     
     if(array[index1] > array[index2]){
         resultArray.push(array[index2]);
-        resultArray.push(array[index1])
-    }
-
-    if(array[index1] < array[index2]){
+        resultArray.push(array[index1]);
+    } else {
         resultArray.push(array[index1]);
         resultArray.push(array[index2]);
     }

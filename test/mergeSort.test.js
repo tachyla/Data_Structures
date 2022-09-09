@@ -38,4 +38,10 @@ describe('merge sort', () => {
 
         expect(result).toStrictEqual([5, 8]);
     });
+
+    it('returns sorted array containing duplicate values', () => {
+        let result = mergeSort([7, 7]);
+
+        expect(result).toStrictEqual([7,7]);
+    })
 })
