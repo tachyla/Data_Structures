@@ -18,7 +18,7 @@ describe('merge sort', () => {
     //     expect(result).toStrictEqual([[9, 4], [1, 7]]);
     // });
 
-    it('returns array if lenght is one', () => {
+    it('returns array if length is one', () => {
 
         let result = mergeSort([7]);
 
@@ -43,5 +43,11 @@ describe('merge sort', () => {
         let result = mergeSort([7, 7]);
 
         expect(result).toStrictEqual([7,7]);
-    })
+    });
+
+    it('returns sorted array containing more than 2 values', () => {
+        let result = mergeSort([7, 7, 3]);
+
+        expect(result).toStrictEqual([3, 7, 7]);
+    });
 })
