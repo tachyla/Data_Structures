@@ -48,12 +48,18 @@ describe('merge sort', () => {
     it('returns sorted array containing more than 2 values', () => {
         let result = mergeSort([7, 7, 3]);
 
-        expect(result).toStrictEqual([3, 7, 7]);
+        expect(result).toStrictEqual([3, 7, 7]); 
     });
 
     it('returns sorted array containing more than 3 values', () =>{
         let result = mergeSort([5, 7, 3, 4]);
 
         expect(result).toStrictEqual([3, 4, 5, 7]);
+    });
+
+    it('returns sorted array containing duplicates & >3 values', () =>{
+        let result = mergeSort([7, 5, 7, 3, 4]);
+
+        expect(result).toStrictEqual([3, 4, 5, 7, 7]);
     });
 })
