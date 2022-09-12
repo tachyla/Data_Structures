@@ -62,4 +62,14 @@ describe('merge sort', () => {
 
         expect(result).toStrictEqual([3, 4, 5, 7, 7]);
     });
+
+    it('returns sorted array when dataset is large', () => {
+        let result = mergeSort([
+            60, 87, 19, 16, 53, 22, 13, 40, 27, 51,
+            71, 5, 7, 3, 4, 18, 2, 1, 6, 4,
+            16, 20, 90, 87, 9, 76, 35, 14, 0, 12 
+        ]);
+
+        expect(result).toStrictEqual[0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 13, 14, 16, 18, 19, 20, 22, 27, 35, 40, 51, 53, 60, 76, 87, 87, 90]
+    });
 })
