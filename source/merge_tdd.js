@@ -5,35 +5,43 @@ const mergeSort = (array) => {
     //logically inserts elements in numeric order
     const mergeHelper = (arrayA, arrayB) => {
         let resultArray = [];
-
-        let i1 = 0;
-        let i2 = 0;
         
-        //while 2 arrays have length
-        while(i1 < arrayA.length && i2 < arrayB.length){
-            //if arrayA[index1] is smallest; push  arrayA[index1]; increase index pointer
-            if(arrayA[i1] < arrayB[i2]){
-                resultArray.push(arrayA[i1]);
-                i1++;
+        // while(i1 < arrayA.length && i2 < arrayB.length){
+        //     //if arrayA[index1] is smallest; push  arrayA[index1]; increase index pointer
+        //     if(arrayA[i1] < arrayB[i2]){
+        //         resultArray.push(arrayA[i1]);
+        //         i1++;
+        //     }
+        //     //otherwise push arrayB[index2]; increase pointer index
+        //     else{
+        //         resultArray.push(arrayB[i2]);
+        //         i2++;
+        //     }
+        // }
+        if(arrayA.length && arrayB.length){
+            for(let indexA = 0; indexA < arrayA.length; indexA++){
+                if(arrayA[indexA] < arrayB[indexB]){
+                    resultArray.push(arrayA[indexA]);
+                    indexA++;
+                }
             }
-            //otherwise push arrayB[index2]; increase pointer index
-            else{
-                resultArray.push(arrayB[i2]);
-                i2++;
+
+            for(let indexB = 0; indexB < arrayB.length; indexB++){
+                if(arrayA[indexA] > arrayB[indexB]){
+                    resultArray.push(arrayB[indexB]);
+                    indexB++;
+                }
+                else{ resultArray.push(arrayA[indexA]);
+                indexA++
+            };
             }
+        }
+        else if(indexA < arrayA.length){
+            resultArray.push(arrayA[indexA]);
+            indexA++;
         }
 
-        //while arrayA has length
-        while(i1 < arrayA.length){
-            resultArray.push(arrayA[i1]);
-            i1++;
-        }
-
-        //while arrayB has length
-        while(i2 < arrayB.length){
-            resultArray.push(arrayB[i2]);
-            i2++;
-        }
+        else{}
         
         return resultArray;
     }
