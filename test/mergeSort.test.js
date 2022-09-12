@@ -79,4 +79,27 @@ describe('merge sort', () => {
         expect(result).toStrictEqual(expectedResult);
     });
 
+    it('returns sorted array when dataset is large & contains duplicates', () => {
+        let result = mergeSort([
+            60, 87, 19, 16, 53, 22, 13, 40, 27, 51,
+            71, 5, 7, 3, 4, 18, 2, 1, 6, 4,
+            16, 20, 90, 87, 9, 76, 35, 14, 0, 12,
+            60, 87, 19, 16, 53, 22, 13, 40, 27, 51,
+            71, 5, 7, 3, 4, 18, 2, 1, 6, 4,
+            16, 20, 90, 87, 9, 76, 35, 14, 0, 12 
+
+        ]);
+
+        let expectedResult = [
+            0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 
+            4, 4, 5, 5, 6, 6, 7, 7, 9, 9, 
+            12, 12, 13, 13, 14, 14, 16, 16, 16, 16, 
+            18, 18, 19, 19, 20, 20, 22, 22, 27, 27, 
+            35, 35, 40, 40, 51, 51, 53, 53, 60, 60, 
+            71, 71, 76, 76, 87, 87, 87, 87, 90, 90
+        ];
+
+        expect(result).toStrictEqual(expectedResult);
+    });
+
 });
