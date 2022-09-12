@@ -13,6 +13,7 @@ const mergeSort = (array) => {
     //implement sorting logic
     if(partition1[0] < partition2[0]){
         resultArray.push(partition1[0]);
+        resultArray.push(partition2[0]);
     }
     else{
         resultArray.push(partition2[0]);
