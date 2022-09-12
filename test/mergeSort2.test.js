@@ -9,4 +9,13 @@ describe('mergeSort function', () =>{
 
         expect(result).toEqual([7]);
     });
+
+    it('returns sorted array when array length is two', () => {
+        let inputArray = [9, 3];
+        let expectedResult = [3, 9];
+
+        let result = mergeSort(inputArray);
+
+        expect(result).toStrictEqual(expectedResult);
+    })
 })
