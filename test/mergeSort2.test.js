@@ -28,4 +28,14 @@ describe('mergeSort function', () =>{
         expect(result).toEqual(expectedResult);
     });
 
+    it('returns sorted array when array contains duplicate values', () => {
+        let inputArray = [9, 3, 3 , 9];
+        let expectedResult = [3, 3, 9, 9];
+
+        let result = mergeSort(inputArray);
+
+        expect(result).toEqual(expectedResult);
+    });
+
+
 });
