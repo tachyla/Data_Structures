@@ -19,7 +19,7 @@ describe('quickSort tests', () => {
         expect(result).toStrictEqual(expectedResult);
     });
 
-    it('returns sorted array with length greater than 1', () => {
+    it('returns sorted array with length greater than one', () => {
         let inputArray = [4, 2];
         
         let result = quicksort(inputArray);
@@ -30,7 +30,7 @@ describe('quickSort tests', () => {
 
     });
 
-    it('returns sorted array with sorted array & length greater than 1', () => {
+    it('returns sorted array with sorted array & length greater than one', () => {
         let inputArray = [2, 4];
         
         let result = quicksort(inputArray);

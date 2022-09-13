@@ -5,7 +5,7 @@ const quickSort = (array) => {
 
         let pivotIndex = 0;
         
-        swapFunction(pivotIndex);
+        pivotFunction(pivotIndex);
         
         return array;
     }
@@ -14,15 +14,19 @@ const quickSort = (array) => {
     
     
     //pick pivotIndex & compare other values to it
-    function swapFunction(pivotIndex) {
+    function pivotFunction(pivotIndex) {
         for (let i = pivotIndex + 1; i < array.length; i++) {
 
             if (array[pivotIndex] > array[i]) {
-                let temp = array[pivotIndex];
-                array[pivotIndex] = array[i];
-                array[i] = temp;
+                swapFunction(pivotIndex, i);
             }
         }
+    }
+
+    function swapFunction(pivotIndex, i) {
+        let temp = array[pivotIndex];
+        array[pivotIndex] = array[i];
+        array[i] = temp;
     }
 }
 
