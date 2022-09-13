@@ -51,5 +51,15 @@ describe('quickSort tests', () => {
 
     });
 
+    it('sorts array with length greater than two', () => {
+        const inputArray = [5, 3, 3];
+
+        let result = quicksort(inputArray);
+        
+        const expectedResult = [3, 3, 5];
+
+        expect(result).toEqual(expectedResult);
+    });
+
 
 });
