@@ -10,12 +10,23 @@ describe('quickSort tests', () => {
         expect(result).toEqual(expectedResult);
     });
 
-    it('returns sorted array with length greater than one', () => {
-        let inputArray = [12, 2, 10];
+    it('returns sorted array with length zero', () => {
+        let inputArray = [];
         let result = quicksort(inputArray);
 
-        let expectedResult = [2, 10, 12];
+        let expectedResult = [];
 
         expect(result).toStrictEqual(expectedResult);
+    });
+
+    it('returns sorted array with length greater than 1', () => {
+        let inputArray = [4, 2];
+        
+        let result = quicksort(inputArray);
+
+        let expectedResult = [2, 4];
+
+        expect(result).toEqual(expectedResult);
+
     });
 });
