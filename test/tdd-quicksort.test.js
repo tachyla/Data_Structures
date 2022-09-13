@@ -38,5 +38,18 @@ describe('quickSort tests', () => {
         let expectedResult = [2, 4];
 
         expect(result).toEqual(expectedResult);
-    })
+    });
+
+    it('returns sorted array when input array contains duplicates', () => {
+        const inputArray = [2, 2];
+
+        let result = quicksort(inputArray);
+
+        const expectedResult = [2, 2];
+
+        expect(result).toEqual(expectedResult);
+
+    });
+
+
 });
