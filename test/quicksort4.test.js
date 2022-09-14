@@ -46,7 +46,7 @@ describe('quicksort tests', () => {
             expect(result).toEqual(expectedResult);
         });
 
-        xit('can sort when the array has the same number', () => {
+        it('can sort when the array has the same number', () => {
             const inputArray = [8, 8];
 
             let result = quickSort(inputArray);
