@@ -10,4 +10,14 @@ describe('quicksort tests', () => {
         
         expect(result).toEqual(expectedResult);
     });
+
+    it('returns array with length zero', () => {
+        const inputArray = [];
+
+        let result = quickSort(inputArray);
+
+        expectedResult = [];
+        
+        expect(result).toEqual(expectedResult);
+    });
 })
