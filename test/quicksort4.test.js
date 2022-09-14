@@ -57,11 +57,10 @@ describe('quicksort tests', () => {
         });
     });
 
-    xit('returns sorted array with length greater than two', () => {
+    it('returns sorted array with length greater than two', () => {
         const inputArray = [4, 6, 2];
 
         let result = quickSort(inputArray);
-        console.log(result);
 
         expectedResult = [2, 4, 6];
         
