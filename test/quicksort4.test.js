@@ -20,4 +20,14 @@ describe('quicksort tests', () => {
         
         expect(result).toEqual(expectedResult);
     });
+
+    it('returns sorted array with length greater than one', () => {
+        const inputArray = [4, 2];
+
+        let result = quickSort(inputArray);
+
+        expectedResult = [2, 4];
+        
+        expect(result).toEqual(expectedResult);
+    });
 })
