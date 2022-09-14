@@ -1,32 +1,69 @@
 const quickSort = require('../source/quicksort4');
 
 describe('quicksort tests', () => {
-    it('returns array with length one', () => {
-        const inputArray = [3];
+    describe('Arrays of one', () => {
+        it('returns array with length one', () => {
+            const inputArray = [3];
 
-        let result = quickSort(inputArray);
+            let result = quickSort(inputArray);
 
-        expectedResult = [3];
-        
-        expect(result).toEqual(expectedResult);
+            expectedResult = [3];
+            
+            expect(result).toEqual(expectedResult);
+        });
     });
 
-    it('returns array with length zero', () => {
-        const inputArray = [];
+    describe('Arrays of zero', () => {
+        it('returns array with length zero', () => {
+            const inputArray = [];
 
-        let result = quickSort(inputArray);
+            let result = quickSort(inputArray);
 
-        expectedResult = [];
-        
-        expect(result).toEqual(expectedResult);
+            expectedResult = [];
+            
+            expect(result).toEqual(expectedResult);
+        });
     });
 
-    it('returns sorted array with length greater than one', () => {
-        const inputArray = [4, 2];
+    describe('Arrays of two', () => {
+        it('can sort when the order is descending', () => {
+            const inputArray = [4, 2];
+
+            let result = quickSort(inputArray);
+
+            expectedResult = [2, 4];
+            
+            expect(result).toEqual(expectedResult);
+        });
+
+        it('can sort when the order is ascending', () => {
+            const inputArray = [1, 8];
+
+            let result = quickSort(inputArray);
+
+            expectedResult = [1, 8];
+            
+            expect(result).toEqual(expectedResult);
+        });
+
+        xit('can sort when the array has the same number', () => {
+            const inputArray = [8, 8];
+
+            let result = quickSort(inputArray);
+
+            expectedResult = [8, 8];
+            
+            expect(result).toEqual(expectedResult);
+        });
+    });
+
+    xit('returns sorted array with length greater than two', () => {
+        const inputArray = [4, 6, 2];
 
         let result = quickSort(inputArray);
+        console.log(result);
 
-        expectedResult = [2, 4];
+        expectedResult = [2, 4, 6];
         
         expect(result).toEqual(expectedResult);
     });
