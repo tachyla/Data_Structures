@@ -24,9 +24,10 @@ describe('tennis game', () => {
         expect(result).toEqual(true);
     });
 
-    it('returns score for player entered', () => {
+    it('returns score zero for player w/o points', () => {
         let result = tennis_game('playerOne');
         let expectedResult = [];
         expect(result).toEqual(expectedResult);
-    })
+    });
+
 });
