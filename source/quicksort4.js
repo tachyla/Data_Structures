@@ -1,37 +1,35 @@
+const swapFunction = (swapArray, pivotIndex, i) => {
+    let temp = swapArray[pivotIndex];
+    swapArray[pivotIndex] = swapArray[i];
+    swapArray[i] = temp;
+}
+
 const quickSort = (array) => {
     if(array.length <= 1 ) return array;
 
     if(array.length > 1){
 
         let pivotIndex = 0;
-        let swapIndex = pivotIndex;
+        let left = pivotIndex;
 
-        const swapFunction = (array, pivotIndex, i) => {
-            let temp = array[pivotIndex];
-            array[pivotIndex] = array[i];
-            array[i] = temp;
-        }
-
-        for(let i = pivotIndex + 1; i < array.length; i++){
-
-            if(array[i] < array[pivotIndex]){
-                swapIndex++; //[2, 6, 4]
-                swapFunction(i, pivotIndex);
+        for(let right = pivotIndex + 1; right < array.length; right++){
+            if(array[right] < array[pivotIndex]){
+                left++; 
+                swapFunction(array, pivotIndex, right);
             }
         }
+
+        let arrayA = array.slice(0, pivotIndex + 1); 
+        let arrayB = array.slice(pivotIndex + 1, array.length); 
+        console.log(arrayA); // [2]  === left
+        console.log(arrayB); // [6, 4] === right
+        //left = 1
+
+        quickSort(arrayA);  //quickSort(array, 0, pivotIndex);
+        quickSort(arrayB); //quickSort(array, pivotIndex + 1, array.length)
+        
     }
     return array;
 }
 
 module.exports = quickSort;
-
-
-// array[pivotIndex] = 4
-// array[i] = 6
-
-//  6<4 false
-//  2 < 4 true >> increase swapIndex >> call swap()
-
-
-
-//Current [2, 6, 4]
