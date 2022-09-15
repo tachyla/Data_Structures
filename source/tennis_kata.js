@@ -3,6 +3,10 @@ const tennis_game = (input) => {
         return [];
     }
 
+    if(input === 'playerTwo'){
+        return [15];
+    }
+
     else{
         return true;
     }
