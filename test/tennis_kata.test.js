@@ -23,4 +23,10 @@ describe('tennis game', () => {
 
         expect(result).toEqual(true);
     });
+
+    it('returns score for player entered', () => {
+        let result = tennis_game('playerOne');
+        let expectedResult = [];
+        expect(result).toEqual(expectedResult);
+    })
 });
