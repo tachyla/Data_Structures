@@ -24,18 +24,21 @@ describe('tennis game', () => {
         expect(result).toEqual(true);
     });
 
-    it('returns score zero for player w/o points', () => {
-        let result = tennis_game('playerOne');
-        let expectedResult = [];
-        expect(result).toEqual(expectedResult);
+    describe('tests requesting player score', () => {
+        it('returns score for player 1', () => {
+            let result = tennis_game('playerOne');
+            let expectedResult = [];
+            
+            expect(result).toEqual(expectedResult);
+        });
+        
+        it('returns score for player 2', () => {
+            let result = tennis_game('playerTwo');
+            let expectedResult = [];
+    
+            expect(result).toEqual(expectedResult);
+        });
     });
-
-    it('returns score 15 for player with 15 points', () => {
-        let result = tennis_game('playerTwo');
-
-        let expectedResult = [15];
-
-        expect(result).toEqual(expectedResult);
-    });
+    
 
 });

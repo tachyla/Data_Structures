@@ -1,10 +1,12 @@
 const tennis_game = (input) => {
     if(input === 'playerOne'){
-        return [];
+        let p1_score = [];
+        return p1_score;
     }
 
     if(input === 'playerTwo'){
-        return [15];
+        let p2_score = [];
+        return p2_score;
     }
 
     else{
